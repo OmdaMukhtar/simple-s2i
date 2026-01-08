@@ -10,3 +10,6 @@ DOCROOT=/opt/app-root/src
 cp -r /tmp/src/* ${DOCROOT}/
 
 echo "Assemble finished"
+
+
+
