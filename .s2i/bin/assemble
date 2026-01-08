@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+echo "Running custom S2I assemble..."
+
+# Apache doc root in PHP S2I image
+DOCROOT=/var/www/html
+
+# Copy source code
+cp -r ./* ${DOCROOT}/
+
+echo "Assemble finished"
