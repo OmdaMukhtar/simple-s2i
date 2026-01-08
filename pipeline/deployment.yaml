@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: s2i-app
+  name: s2i-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: s2i-app
+  template:
+    metadata:
+      labels:
+        app: s2i-app
+    spec:
+      containers:
+      - image: default-route-openshift-image-registry.apps-crc.testing/s2i-pipeline-demo/s2i-app
+        name: s2i-app

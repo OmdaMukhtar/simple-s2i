@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  name: s2i-pipelinerun
+spec:
+  pipelineRef:
+    name: s2i-pipeline
+  params:
+    - name: git-url
+      value: git@github.com:OmdaMukhtar/simple-s2i.git
+    - name: branch
+      value: master

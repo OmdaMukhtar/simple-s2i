@@ -1,0 +1,23 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: s2i-app
+spec:
+  source:
+    type: Git
+    git:
+      uri: git@github.com:OmdaMukhtar/simple-s2i.git
+      ref: master
+    sourceSecret:
+      name: git-ssh-key
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: nodejs:20
+        namespace: openshift
+  output:
+    to:
+      kind: ImageStreamTag
+      name: s2i-app:latest
