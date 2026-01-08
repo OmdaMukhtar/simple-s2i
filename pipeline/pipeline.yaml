@@ -9,7 +9,7 @@ spec:
       default: git@github.com:OmdaMukhtar/simple-s2i.git
     - name: branch
       description: Git branch
-      default: master
+      default: tekton
   tasks:
     - name: trigger-build
       taskSpec:

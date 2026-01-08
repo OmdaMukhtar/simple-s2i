@@ -9,4 +9,4 @@ spec:
     - name: git-url
       value: git@github.com:OmdaMukhtar/simple-s2i.git
     - name: branch
-      value: master
+      value: tekton
