@@ -7,6 +7,6 @@ echo "Running custom S2I assemble..."
 DOCROOT=/var/www/html
 
 # Copy source code
-cp -r ./* ${DOCROOT}/
+cp -r ./index.html ${DOCROOT}/
 
 echo "Assemble finished"
